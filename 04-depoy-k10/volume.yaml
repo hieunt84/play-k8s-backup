@@ -1,0 +1,39 @@
+Name:             csi-hostpath-snapclass
+Namespace:        
+Labels:           addonmanager.kubernetes.io/mode=EnsureExists
+Annotations:      k10.kasten.io/is-snapshot-class: true
+API Version:      snapshot.storage.k8s.io/v1
+Deletion Policy:  Delete
+Driver:           hostpath.csi.k8s.io
+Kind:             VolumeSnapshotClass
+Metadata:
+  Creation Timestamp:  2021-10-04T01:11:29Z
+  Generation:          1
+  Managed Fields:
+    API Version:  snapshot.storage.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:deletionPolicy:
+      f:driver:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubectl.kubernetes.io/last-applied-configuration:
+        f:labels:
+          .:
+          f:addonmanager.kubernetes.io/mode:
+    Manager:      kubectl-client-side-apply
+    Operation:    Update
+    Time:         2021-10-04T01:11:29Z
+    API Version:  snapshot.storage.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k10.kasten.io/is-snapshot-class:
+    Manager:         kubectl-annotate
+    Operation:       Update
+    Time:            2021-10-04T01:54:57Z
+  Resource Version:  4634
+  UID:               df361c80-8bcb-40c9-9e17-de35135f4e16
+Events:              <none>

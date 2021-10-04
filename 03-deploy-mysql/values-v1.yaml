@@ -1,0 +1,6 @@
+primary:
+  persistence:
+    storageClass: local-path
+    accessModes:
+      - ReadWriteOnce
+    size: 2Gi
