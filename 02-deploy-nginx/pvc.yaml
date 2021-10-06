@@ -1,0 +1,13 @@
+# pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pv-claim
+  namespace: nginx
+spec:
+  storageClassName: csi-hostpath-sc
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi

@@ -1,9 +1,0 @@
-global:
-  persistence:
-    mountPath: "/mnt/k10state"
-    enabled: true
-    storageClass: local-path 
-    accessMode: ReadWriteOnce
-    size: 5Gi
-    metering:
-      size: 2Gi
