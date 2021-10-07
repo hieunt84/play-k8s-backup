@@ -12,6 +12,11 @@ vagrant up
 kubectl taint node k8s-vm node-role.kubernetes.io/master-
 ```
 
+2. Install volume snapshot
+```
+install-volume-snapshot
+```
+
 3. Deploy csi-driver-host-path
 ```
 ref:
