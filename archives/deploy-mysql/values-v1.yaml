@@ -1,6 +1,0 @@
-primary:
-  persistence:
-    storageClass: standard
-    accessModes:
-      - ReadWriteOnce
-    size: 1Gi
