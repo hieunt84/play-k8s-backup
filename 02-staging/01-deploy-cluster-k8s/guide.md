@@ -1,5 +1,6 @@
 ### Intro
 - using vagrant deploy cluster k8s version 1.18.1
+- using vagrant deploy cluster k8s version 1.20.11
 
 ### Steps
 1. Start your cluster
