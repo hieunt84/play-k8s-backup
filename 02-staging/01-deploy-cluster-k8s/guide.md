@@ -12,19 +12,19 @@ vagrant up
 kubectl taint node k8s-vm node-role.kubernetes.io/master-
 ```
 
-2. Install volume snapshot
+3. Install volume snapshot
 ```
-install-volume-snapshot
+install-volume-snapshot.sh
 ```
 
-3. Deploy csi-driver-host-path
+4. Deploy csi-driver-host-path
 ```
 ref:
 https://github.com/kubernetes-csi/csi-driver-host-path
 
 ```
 
-4. Check volume snapshot class
+5. Check volume snapshot class
 ```
 kubectl get volumesnapshotclasses
 NAME                     DRIVER                DELETIONPOLICY   AGE
@@ -48,6 +48,7 @@ spec:
   storageClassName: csi-hostpath-sc
 
 ```
+
 7. Take a volume snapshot
 ```
 # example-csi-snapshot.yaml
