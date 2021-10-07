@@ -47,6 +47,7 @@ Once K10 is running, use the following commands to configure the local storage s
 
 kubectl annotate volumesnapshotclass csi-hostpath-snapclass k10.kasten.io/is-snapshot-class=true
 ```
+
 4. View k10 Dashborad
 ```
 View K10 Dashboard
@@ -106,10 +107,13 @@ Causing Data Loss
 For the purposes of this test drive, we will simply drop the k10demo database we had created earlier.
 
 MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace mysql mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo)
+
 kubectl exec -it --namespace=mysql $(kubectl --namespace=mysql get pods -o jsonpath='{.items[0].metadata.name}') -- mysql -u root --password=$MYSQL_ROOT_PASSWORD -e "DROP DATABASE k10demo"
+
 Verify that the database has been deleted by running:
 
 kubectl exec -it --namespace=mysql $(kubectl --namespace=mysql get pods -o jsonpath='{.items[0].metadata.name}') -- mysql -u root --password=$MYSQL_ROOT_PASSWORD -e "SHOW DATABASES LIKE 'k10demo'"
+
 Recovering Data
 To recover MySQL, go to the K10 dashboard, click Applications, and then select Restore on the MySQL card.
 
@@ -122,6 +126,7 @@ To verify that our data was recovered, run the following command in the terminal
 
 Copy to clipboard
 MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace mysql mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo)
+
 kubectl exec -it --namespace=mysql $(kubectl --namespace=mysql get pods -o jsonpath='{.items[0].metadata.name}') -- mysql -u root --password=$MYSQL_ROOT_PASSWORD -e "SHOW DATABASES LIKE 'k10demo'"
 ```
 7. Confirm email for Quick Start k8s Book
