@@ -1,6 +1,6 @@
 ### Intro
-- using vagrant deploy cluster k8s version 1.18.1
-- using vagrant deploy cluster k8s version 1.20.11
+- using vagrant deploy cluster k8s version 1.21.5
+- using csi-driver-nfs
 
 ### Steps
 1. Start your cluster
