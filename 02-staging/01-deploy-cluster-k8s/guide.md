@@ -15,17 +15,20 @@ init.sh
 
 3. Install volume snapshot
 ```
-setup-volume-snapshot.sh
+shsetup-volume-snapshot.sh
 ```
 
 4. Deploy nfs-server
 ```
-
+sh 012.setup-nfs-server.sh
 ```
 
+5. Deploy nfs-provisioner
+```
+sh 013.sh
 ```
 
-5. Check volume snapshot class
+6. Check volume snapshot class
 ```
 kubectl get volumesnapshotclasses
 NAME                     DRIVER                DELETIONPOLICY   AGE
