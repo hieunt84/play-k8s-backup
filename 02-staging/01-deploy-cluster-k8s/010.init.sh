@@ -13,7 +13,7 @@ PATH=$PATH:/usr/local/bin
 export PATH
 EOF
 
-source /root/.bash_profiles
+source /root/.bash_profile
 
 # Install helm
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
