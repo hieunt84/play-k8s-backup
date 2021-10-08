@@ -7,20 +7,21 @@
 ```
 vagrant up
 ```
-2. Xóa taint trên node cho phép tạo Pod
+
+2. Init
 ```
-kubectl taint node k8s-vm node-role.kubernetes.io/master-
+init.sh
 ```
 
 3. Install volume snapshot
 ```
-install-volume-snapshot.sh
+setup-volume-snapshot.sh
 ```
 
-4. Deploy csi-driver-host-path
+4. Deploy nfs-server
 ```
-ref:
-https://github.com/kubernetes-csi/csi-driver-host-path
+
+```
 
 ```
 

@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Change to the latest supported snapshotter version
 SNAPSHOTTER_VERSION=v2.0.1
 
