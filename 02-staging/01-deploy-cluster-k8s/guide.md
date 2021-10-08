@@ -28,7 +28,13 @@ sh 012.setup-nfs-server.sh
 sh 013.sh
 ```
 
-6. Check volume snapshot class
+6. Deploy csi-driver-nfs
+
+```
+
+```
+
+7. Check volume snapshot class
 ```
 kubectl get volumesnapshotclasses
 NAME                     DRIVER                DELETIONPOLICY   AGE
@@ -36,7 +42,7 @@ csi-hostpath-snapclass   hostpath.csi.k8s.io   Delete           10s
 
 ```
 
-6. Prepare persistent volume
+8. Prepare persistent volume
 ```
 # example-pvc.yaml
 apiVersion: v1
@@ -53,7 +59,7 @@ spec:
 
 ```
 
-7. Take a volume snapshot
+9. Take a volume snapshot
 ```
 # example-csi-snapshot.yaml
 apiVersion: snapshot.storage.k8s.io/v1
@@ -67,7 +73,7 @@ spec:
 
 ```
 
-8. Restore from volume snapshot
+10. Restore from volume snapshot
 ```
 # example-csi-restore.yaml
 apiVersion: v1
