@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Setup Aliases
-cat >> "/root/.bash_profiles" <<EOF
+cat >>/root/.bash_profile<<EOF
 # Setup Aliases
 alias k='kubectl'
 alias ns='kubectl config set-context --current --namespace'
