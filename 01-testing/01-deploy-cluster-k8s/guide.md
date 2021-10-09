@@ -1,7 +1,10 @@
 ### Ref
 ```
 https://minikube.sigs.k8s.io/docs/tutorials/volume_snapshots_and_csi/
+
 https://community.veeam.com/blogs-and-podcasts-57/kubernetes-on-your-laptop-630
+
+https://community.veeam.com/blogs-and-podcasts-57/kasten-on-your-minikube-707
 ```
 
 ### Intro
