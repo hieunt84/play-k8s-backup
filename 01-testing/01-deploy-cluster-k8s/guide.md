@@ -1,19 +1,11 @@
-### Ref
-```
-https://minikube.sigs.k8s.io/docs/tutorials/volume_snapshots_and_csi/
-
-https://community.veeam.com/blogs-and-podcasts-57/kubernetes-on-your-laptop-630
-
-https://community.veeam.com/blogs-and-podcasts-57/kasten-on-your-minikube-707
-```
-
 ### Intro
 - using minikube to create cluster k8s
 
 ### Steps
 1. Start your cluster
 ```
-minikube start -p aged --kubernetes-version=v1.18.1 --cpus 4 --memory 8192 --disk-size='40000mb'
+minikube start -p aged --kubernetes-version=v1.20.11 --cpus 4 --memory 8192 --disk-size='60000mb'
+
 ```
 
 2. Enable addons
@@ -25,6 +17,7 @@ minikube -p aged addons enable csi-hostpath-driver
 3. Change default sc
 ```
 kubectl patch storageclass csi-hostpath-sc -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+
 ```
 
 4. We will now delete the standard sc
@@ -90,6 +83,15 @@ spec:
   resources:
     requests:
       storage: 1Gi
+```
+
+### Ref
+```
+https://minikube.sigs.k8s.io/docs/tutorials/volume_snapshots_and_csi/
+
+https://community.veeam.com/blogs-and-podcasts-57/kubernetes-on-your-laptop-630
+
+https://community.veeam.com/blogs-and-podcasts-57/kasten-on-your-minikube-707
 ```
 
 
