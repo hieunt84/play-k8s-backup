@@ -1,3 +1,0 @@
-global:
-  persistence: 
-    storageClass: csi-hostpath-sc
